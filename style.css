@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
+    background-color: #fafafa;
+    text-align: center;
+    padding: 50px;
+    color: #1a1a1a;
+  }
+
+nav {
+    background-color: #1a1a1a;
+    padding: 10px 0;
+  }
+  
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;  /* Try space-between or space-evenly too */
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+nav ul li {
+    margin: 0;  /* Remove margin so spacing comes from flexbox */
+  }
+  
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+  }
+  
+nav ul li a:hover {
+    text-decoration: underline;
+  }
+
+#intro {
+    margin: 20%;
+}
+
+button a {
+    color: #4f46e5;
+}
+
+
+  
+  .robot {
+    animation: dance 1s infinite alternate;
+    transform-origin: bottom center;
+  }
+  
+  .head {
+    width: 60px;
+    height: 60px;
+    background: #29b;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+  
+  .body {
+    width: 40px;
+    height: 60px;
+    background: #29b;
+    margin: 0 auto;
+  }
+  
+  .arms {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    height: 25px;
+    background: #29b;
+    margin: 0px auto;
+    border-radius: 20px;
+  }
+
+  .arm {
+    width: 25px;
+    height: 60px;
+    background-color: #29b;
+    border-radius: 20px;
+    transform-origin: top center;
+  }
+
+  .left-arm {
+    animation: wave-left 0.5s infinite alternate;
+  }
+  
+  .right-arm {
+    animation: wave-right 0.5s infinite alternate;
+  }
+  
+  .legs {
+    width: 40px;
+    height: 40px;
+    background: #29b;
+    margin: 0 auto;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .eyes {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
+  
+  .eye {
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+  }
+  
+  .eye.left {
+    margin-right: 10px;
+  }
+  
+  .eye.right {
+    margin-left: 10px;
+  }
+
+  .eye {
+    background: radial-gradient(white 30%, #444 70%);
+    box-shadow: 0 0 5px white;
+  }
+  
+  @keyframes dance {
+    0% {
+      transform: rotate(-10deg) translateX(-10px);
+    }
+    100% {
+      transform: rotate(10deg) translateX(10px);
+    }
+  }
+
+  @keyframes wave-left {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(30deg); }
+  }
+  
+  @keyframes wave-right {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-30deg); }
+  }
