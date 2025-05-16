@@ -1,8 +1,14 @@
+@media (max-width: 600px) {
+  .tile {
+    max-width: 90%; /* use most of screen on small devices */
+  }
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #fafafa;
     text-align: center;
-    padding: 50px;
+    padding: 60px;
     color: #1a1a1a;
     display: flex;
     flex-direction: column;
@@ -10,24 +16,28 @@ body {
     justify-content: center;
     height: 100vh;
   }
-
+/* reduce size of laptop and animations on projects page, make it so the tiles can have up to 4 in a row, add laptop tile to home page next to robot, make page headings sit beneath nav bar */
 nav {
-    background-color: #1a1a1a;
-    padding: 10px 0;
-    width: 95%;
-  }
+  background-color: #1a1a1a;
+  padding: 10px 0;
+  width: 100%;
+  position: fixed;       
+  top: 0;
+  left: 0;
+  z-index: 1000;       
+}
   
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-around;  /* Try space-between or space-evenly too */
+    justify-content: space-around;  
     align-items: center;
     margin: 0;
     padding: 0;
   }
   
 nav ul li {
-    margin: 0;  /* Remove margin so spacing comes from flexbox */
+    margin: 0; 
   }
   
 nav ul li a {
@@ -42,25 +52,54 @@ nav ul li a:hover {
   }
 
 .page-heading {
-  background-color: green;
+  background-color: white;
+  width: 100%;
 }
 
+.tile-container {
+  display: flex;
+  flex-wrap: wrap;            
+  justify-content: center;    
+  gap: 20px;
+}
 
 .tile {
-  width:20%;
-  border: 5px solid black;
-  padding: 5px;
+  aspect-ratio: 1 / 1;                  
+  width: 100%;                          
+  max-width: 250px;                     
+  border: 5px solid lightgray;
+  padding: 10px;
   margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); 
+  background-color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  display: flex;                      
+  justify-content: center;
+  align-items: center;
+}
+/* make mini tiles half the size of tiles */
+.mini {
+  width:125px;
+}
+
+.tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
 }
 
   #intro {
     max-width: 600px;
-    margin: 100px auto;
+    margin: 10px auto;
   }
 
-button a {
-    color: #4f46e5;
-}
+  i {
+    font-size: 50px;
+    margin: 10px;
+    color: #1a1a1a;
+  }
+
 
   /* robot animation */
 .robot {
