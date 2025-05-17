@@ -6,19 +6,19 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #fafafa;
+    background-color: #1e1e1e;
     text-align: center;
     padding: 60px;
-    color: #1a1a1a;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
   }
-/* reduce size of laptop and animations on projects page, make it so the tiles can have up to 4 in a row, add laptop tile to home page next to robot, make page headings sit beneath nav bar */
+/* adjust colour an fonts, reduce size of laptop and animations on projects page, make it so the tiles can have up to 4 in a row, add laptop tile to home page next to robot, make page headings sit beneath nav bar */
 nav {
-  background-color: #1a1a1a;
+  background-color: #00ff9d;
   padding: 10px 0;
   width: 100%;
   position: fixed;       
@@ -41,7 +41,7 @@ nav ul li {
   }
   
 nav ul li a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-weight: bold;
     padding: 10px 15px;
@@ -52,7 +52,6 @@ nav ul li a:hover {
   }
 
 .page-heading {
-  background-color: white;
   width: 100%;
 }
 
@@ -67,12 +66,11 @@ nav ul li a:hover {
   aspect-ratio: 1 / 1;                  
   width: 100%;                          
   max-width: 250px;                     
-  border: 5px solid lightgray;
+  border: 5px solid #00ff9d;
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); 
-  background-color: white;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
   display: flex;                      
@@ -86,7 +84,7 @@ nav ul li a:hover {
 
 .tile:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+  box-shadow: 0 0 15px #00bcd4, 0 0 25px #00bcd4;
 }
 
   #intro {
@@ -97,7 +95,7 @@ nav ul li a:hover {
   i {
     font-size: 50px;
     margin: 10px;
-    color: #1a1a1a;
+    color: #00ff9d;
   }
 
 
