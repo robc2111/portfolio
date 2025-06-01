@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Robert Carney | Get In Touch</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+          <h1>Robert Carney</h1>
+          <div class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <nav aria-label="main navigation">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./about.html">About</a></li>
+              <li><a href="./projects.html">Projects</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+  <main class="layout">
+    <aside class="sidebar" aria-label="Project categories">
+      <ul>
+        <li><a href="./projects/web-development">Web Development</a></li>
+        <li><a href="./projects/automation">Automation</a></li>
+        <li><a href="./projects/app-development">App Development</a></li>
+        <li><a href="./projects/digital-products">Digital Products</a></li>
+      </ul>
+    </aside>
+
+    <section class="main-content contact">
+        <h2>Contact Me</h2>
+        <p>If you’d like to work together, ask a question, or just say hello, feel free to drop a message using the form below. I’ll respond as soon as I can.</p>
+      
+        <form action="https://formspree.io/f/mdkznqzl" method="POST" class="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+      
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="_replyto" required>
+      
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+      
+          <button type="submit">Send Message</button>
+          <!--add thank you response once domain set up-->
+        </form>
+        <div class="social-links">
+            <h3>Connect with Me</h3>
+            <ul>
+              <li><a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="https://twitter.com/your-handle" target="_blank" rel="noopener">Twitter</a></li>
+              <li><a href="mailto:your@email.com">Email Me</a></li>
+            </ul>
+            <!--update social media links-->
+          </div>
+      </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

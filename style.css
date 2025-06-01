@@ -114,11 +114,6 @@ body {
     flex-shrink: 0;
     background-color: #e3ecef;;
   }
-
-  .about-img {
-    max-width: 375px;
-    border-radius: 50%;
-  }
   
   .main-content {
     width: 80%;
@@ -127,7 +122,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 10px;
+    padding: 24px;
     letter-spacing: 1.5px;
     color: #e3ecef;
     text-shadow:
@@ -143,6 +138,14 @@ body {
     background-image: url("./assets/underwater.png");
   }
 
+  .projects {
+    background-image: url("./assets/waterfall.png");
+  }
+
+  .contact {
+    background-image: url("./assets/phone.png");
+  }
+
   .about-img {
     float: right;
     margin: 0 0 20px 20px;
@@ -151,6 +154,70 @@ body {
     height: auto;
     border-radius: 32px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+    max-width: 600px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #50656f;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .contact-form button {
+    background-color: #50656f;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #ffd700;
+    color: #000;
+  }
+
+  .social-links {
+    margin-top: 40px;
+  }
+  
+  .social-links h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #ffd700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+  }
+  
+  .social-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .social-links ul li a {
+    color: #e3ecef;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .social-links ul li a:hover {
+    color: #ffd700;
   }
  
   .sidebar ul {
@@ -335,14 +402,14 @@ word-wrap: break-word; /* Change to normal if you want wrapping */
     }
     
     .animated-link {
-      color: #50656f !important;
+      color: #50656f;
       text-decoration: none;
       transition: transform 0.3s ease, color 0.3s ease;
     }
   
     .animated-link:hover {
       transform: scale(1.1);
-      color: #ffd700 !important;
+      color: #ffd700;
       text-shadow: 0 0 6px #ffd700;
     }
   }
@@ -395,18 +462,6 @@ word-wrap: break-word; /* Change to normal if you want wrapping */
 
     .animated-link {
       padding: 4px 6px;
-    }
-
-    .animated-link {
-      color: #50656f !important;
-      text-decoration: none;
-      transition: transform 0.3s ease, color 0.3s ease;
-    }
-  
-    .animated-link:hover {
-      transform: scale(1.1);
-      color: #ffd700 !important;
-      text-shadow: 0 0 6px #ffd700;
     }
   }
   

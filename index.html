@@ -46,25 +46,6 @@
       <p>After 21 years in management, I pivoted into tech to create tools and websites that save time and make life easier. I blend logic with creativity to help people work smarter with clean code and thoughtful automation.</p>
     </section>
   </main>
-  <script>
-    const burger = document.getElementById('burger');
-    const nav = document.querySelector('nav');
-  
-    burger.addEventListener('click', () => {
-      nav.classList.toggle('active');
-    });
-
-    burger.addEventListener('click', () => {
-  nav.classList.toggle('active');
-  burger.classList.toggle('open');
-});
-
-burger.addEventListener('click', () => {
-  const expanded = burger.getAttribute('aria-expanded') === 'true';
-  burger.setAttribute('aria-expanded', !expanded);
-  nav.classList.toggle('active');
-  burger.classList.toggle('open');
-});
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
