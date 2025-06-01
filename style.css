@@ -112,19 +112,43 @@ body {
   .sidebar {
     width: 20%;
     flex-shrink: 0;
+    background-color: #e3ecef;;
+  }
+
+  img {
+    width: 375px;
+    border-radius: 50%;
   }
   
   .main-content {
     width: 80%;
     min-height: 92vh;
-    background-image: url("./assets/beach.png");
+    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding: 10px;
     letter-spacing: 1.5px;
-    color: #fff;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+    color: #e3ecef;
+    text-shadow: 02px 2px 6px rgba(0, 0, 0, 0.8);
+  }
+
+  .home {
+    background-image: url("./assets/beach.png");
+  }
+
+  .about {
+    background-image: url("./assets/underwater.png");
+  }
+
+  .about-img {
+    float: right;
+    margin: 0 0 20px 20px;
+    width: 250px;
+    max-width: 40%;
+    height: auto;
+    border-radius: 32px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   }
  
   .sidebar ul {
@@ -211,6 +235,13 @@ body {
       flex-direction: row;
       justify-content: space-between;
     }
+
+    .about-img {
+      float: none;
+      display: block;
+      margin: 0 auto 20px auto;
+      width: 375px;
+    }
   
     nav {
         display: none;
@@ -281,7 +312,7 @@ body {
       }
   
     .main-content {
-      padding-bottom: 80px;
+      padding-bottom: 130px;
       width: 100%;
       order: 1; /* Makes space for fixed sidebar at bottom */
     }
