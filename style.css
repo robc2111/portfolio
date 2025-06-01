@@ -289,8 +289,6 @@ body {
     
   }
 
-  /* add animation for when screen first loads where text is displayed after delay */
-
 
   @media screen and (max-width: 375px) {
     body {
@@ -301,17 +299,33 @@ body {
       font-size: 1.2rem;
     }
   
+    header ul li a {
+      font-size: 14px;
+    }
+  
     .main-content {
       padding: 8px;
+      background-image: none; /* Hide background on mobile */
+      background-color: #234; /* Optional: solid color fallback */
+      color: #fff;
+      text-shadow: none;
+    }
+  
+    .main-content h2 {
+      background-image: url('./assets/beach.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 40px 16px;
+      text-align: center;
+      color: #fff;
+      font-size: 1.4rem;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     }
   
     .sidebar li {
       flex: 1 1 100%;
       font-size: 16px;
-    }
-  
-    header ul li a {
-      font-size: 14px;
     }
   }
   
