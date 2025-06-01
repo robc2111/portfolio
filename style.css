@@ -183,7 +183,17 @@ word-wrap: break-word; /* Change to normal if you want wrapping */
     color: #ffd700;
   }
 
-
+  .animated-link {
+    display: inline-block;
+    color: #50656f;
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+  
+  .animated-link:hover {
+    transform: scale(1.05);
+    color: #ffd700;
+  }
   
   /* ===== BURGER MENU (initially hidden) ===== */
 .burger {
@@ -324,7 +334,17 @@ word-wrap: break-word; /* Change to normal if you want wrapping */
       order: 1; /* Makes space for fixed sidebar at bottom */
     }
     
-    
+    .animated-link {
+      color: #50656f !important;
+      text-decoration: none;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+  
+    .animated-link:hover {
+      transform: scale(1.1);
+      color: #ffd700 !important;
+      text-shadow: 0 0 6px #ffd700;
+    }
   }
 
 
@@ -372,16 +392,22 @@ word-wrap: break-word; /* Change to normal if you want wrapping */
       flex: 1 1 100%;
       font-size: 16px;
     }
+
+    .animated-link {
+      padding: 4px 6px;
+    }
+
+    .animated-link {
+      color: #50656f !important;
+      text-decoration: none;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+  
+    .animated-link:hover {
+      transform: scale(1.1);
+      color: #ffd700 !important;
+      text-shadow: 0 0 6px #ffd700;
+    }
   }
   
-  .animated-link {
-    display: inline-block;
-    color: #50656f;
-    text-decoration: none;
-    transition: transform 0.2s ease, color 0.2s ease;
-  }
-  
-  .animated-link:hover {
-    transform: scale(1.05);
-    color: #ffd700;
-  }
+ 
