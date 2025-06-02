@@ -219,6 +219,43 @@ body {
   .social-links ul li a:hover {
     color: #ffd700;
   }
+
+  .social-links a i {
+    font-size: 1.5rem;
+    vertical-align: middle;
+  }
+
+  .social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  .social-grid li a {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid #50656f;
+    border-radius: 8px;
+    color: #e3ecef;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .social-grid li a:hover {
+    background-color: #50656f;
+    transform: scale(1.03);
+  }
+  
+  .social-grid li a:hover {
+    background-color: #50656f;
+    transform: scale(1.03);
+  }
  
   .sidebar ul {
     list-style: none;
@@ -260,6 +297,38 @@ word-wrap: break-word; /* Change to normal if you want wrapping */
   .animated-link:hover {
     transform: scale(1.05);
     color: #ffd700;
+  }
+
+  /* Only apply this to non-grid lists, if any */
+.social-links ul:not(.social-grid) {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+  
+  .social-links a {
+    color: #e3ecef;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .social-links a i {
+    margin-right: 8px;
+    color: #ffd700;
+    transition: transform 0.2s ease;
+  }
+  
+  .social-links a:hover i {
+    transform: scale(1.2);
+    color: #fff;
+  }
+  
+  .social-links h3 {
+    margin-bottom: 10px;
+    color: #ffd700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
   }
   
   /* ===== BURGER MENU (initially hidden) ===== */
@@ -462,6 +531,10 @@ word-wrap: break-word; /* Change to normal if you want wrapping */
 
     .animated-link {
       padding: 4px 6px;
+    }
+
+    .social-grid {
+      grid-template-columns: 1fr;
     }
   }
   
