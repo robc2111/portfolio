@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="projects-page">
 
     <header>
         <div class="header-content">
@@ -32,20 +32,52 @@
 
   <main class="layout">
     <aside class="sidebar" aria-label="Project categories">
-      <ul>
-        <li><a href="#web-development">Web Development</a></li>
-        <li><a href="#automation">Automation</a></li>
-        <li><a href="#app-development">App Development</a></li>
-        <li><a href="#digital-products">Digital Products</a></li>
-      </ul>
-    </aside>
+        <ul class="sidebar-list">
+          <li><a href="#web-development" id="link-web-development">Web Development</a></li>
+          <li><a href="#automation" id="link-automation">Automation</a></li>
+          <li><a href="#app-development" id="link-app-development">App Development</a></li>
+          <li><a href="#digital-products" id="link-digital-products">Digital Products</a></li>
+        </ul>
+      </aside>
 
     <section class="main-content projects">
         <h2>Projects</h2>
-        <div id="web-development"></div>
-        <div id="automation"></div>
-        <div id="app-development"></div>
-        <div id="digital-products"></div>
+      <br />
+        <div id="web-development" class="project-section">
+          <h3>Web Development</h3>
+          <br />
+          <div class="project-card placeholder">
+            <h4>Portfolio Site (Coming Soon)</h4>
+            <p>A personal portfolio to showcase my front-end and back-end work.udfvcwihgfdv</p>
+          </div>
+        </div>
+      <br />
+        <div id="automation" class="project-section">
+          <h3>Automation</h3>
+          <br />
+          <div class="project-card placeholder">
+            <h4>Email Automation Tool (Coming Soon)</h4>
+            <p>Streamlines inbox management using custom-built automation flows.</p>
+          </div>
+        </div>
+        <br />
+        <div id="app-development" class="project-section">
+          <h3>App Development</h3>
+          <br />
+          <div class="project-card placeholder">
+            <h4>Task Tracker App (Coming Soon)</h4>
+            <p>A full-stack to-do list app with user authentication and cloud sync.</p>
+          </div>
+        </div>
+        <br />
+        <div id="digital-products" class="project-section">
+          <h3>Digital Products</h3>
+          <br />
+          <div class="project-card placeholder">
+            <h4>Notion Templates Pack (Coming Soon)</h4>
+            <p>Custom templates designed for productivity, freelancing, and project management.</p>
+          </div>
+        </div>
       </section>
   </main>
   <script src="script.js"></script>

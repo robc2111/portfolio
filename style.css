@@ -9,11 +9,17 @@
     overflow-x: hidden;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
 body {
     padding-top: 60px;
     font-family: 'Liberation Sans', Arial, sans-serif;
     font-size: 24px;
   }
+
+/* ---------- Header Styles ---------- */
   
   header {
     background-color: #50656f;
@@ -101,6 +107,8 @@ body {
     transform: translateY(0);
   }
 
+  /* ---------- Layout Styles ---------- */
+
   .layout {
     display: flex;
     flex-wrap: wrap;
@@ -146,6 +154,8 @@ body {
     background-image: url("./assets/phone.png");
   }
 
+/* ---------- about me page ---------- */
+
   .about-img {
     float: right;
     margin: 0 0 20px 20px;
@@ -155,6 +165,8 @@ body {
     border-radius: 32px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   }
+
+/* ---------- contacts page ---------- */
 
   .contact-form {
     display: flex;
@@ -251,16 +263,46 @@ body {
     background-color: #50656f;
     transform: scale(1.03);
   }
-  
-  .social-grid li a:hover {
-    background-color: #50656f;
-    transform: scale(1.03);
+
+/* ---------- Projects Page ---------- */
+
+  .project-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 2px dashed #50656f;
+    padding: 16px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    height: 800px; /* for testing */
+    color: #e3ecef;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease;
   }
+  
+  .project-card h4 {
+    margin-bottom: 8px;
+    color: #ffd700;
+  }
+  
+  .project-card.placeholder:hover {
+    transform: scale(1.02);
+    border-style: solid;
+  }
+
+ /* ---------- Sidebar Styles ---------- */ 
  
   .sidebar ul {
     list-style: none;
     padding: 0;
-    margin: 10px;
+    margin: 10 auto;;
+  }
+
+  .sidebar-list {
+    position: fixed;
+    top: 60px;
+    margin: 0px;
+    left: 0px;
+    padding: 0px;
+    width: 20%;
   }
   
   .sidebar li {
@@ -285,6 +327,22 @@ word-wrap: break-word; /* Change to normal if you want wrapping */
   
   .sidebar a:hover {
     color: #ffd700;
+  }
+
+ .sidebar li.active {
+    background-color: #50656f;
+    color: #ffd700;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .sidebar li.active a {
+    color: #ffd700;
+  }
+  
+  .sidebar li.active li{
+    background-color: #50656f;
+    background: none;
   }
 
   .animated-link {
@@ -362,7 +420,7 @@ word-wrap: break-word; /* Change to normal if you want wrapping */
     transition: all 0.3s ease;
   }
 
-  
+ /* ===== ANIMATIONS ===== */ 
 
   @keyframes fadeInText {
     0% {
@@ -382,6 +440,7 @@ word-wrap: break-word; /* Change to normal if you want wrapping */
   }
   
   /* ===== MEDIA QUERY FOR TABLET AND BELOW ===== */
+
   @media (max-width: 834px) {
     /* Header layout adjustments */
     .header-content {
@@ -428,6 +487,8 @@ word-wrap: break-word; /* Change to normal if you want wrapping */
     }
   
     /* Sidebar repositioned to bottom overlay */
+    
+
     .sidebar {
       position: fixed;
       bottom: 0;
@@ -439,6 +500,17 @@ word-wrap: break-word; /* Change to normal if you want wrapping */
       border-top: 2px solid #50656f;
       padding: 10px 0;
     }
+
+    .sidebar-list {
+      position: static;  /* 🟢 Remove fixed positioning on small screens */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    }
+    
   
     .sidebar ul {
       display: flex;
@@ -465,9 +537,14 @@ word-wrap: break-word; /* Change to normal if you want wrapping */
       }
   
     .main-content {
-      padding-bottom: 130px;
       width: 100%;
+      padding-bottom: 160px; /* Adjust to avoid overlap */
       order: 1; /* Makes space for fixed sidebar at bottom */
+    }
+
+    .project-card {
+      height: auto;
+      min-height: 300px; /* Optional */
     }
     
     .animated-link {
@@ -505,7 +582,7 @@ word-wrap: break-word; /* Change to normal if you want wrapping */
     }
   
     .main-content {
-      padding: 8px;
+      padding-bottom: 200px;
       background-image: none; /* Hide background on mobile */
       background-color: #234; /* Optional: solid color fallback */
       color: #fff;
@@ -538,4 +615,65 @@ word-wrap: break-word; /* Change to normal if you want wrapping */
     }
   }
   
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #121212;
+      color: #e3ecef;
+    }
+  
+    .main-content {
+      color: #e3ecef;
+    }
+  
+    .header-content h1,
+    header ul li a,
+    .sidebar a {
+      color: #e3ecef;
+    }
+  
+    .project-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color: #e3ecef;
+    }
+  
+    .sidebar li {
+      background: #333;
+      border-color: #888;
+    }
+  
+    .sidebar li.active {
+      background-color: #ffd700;
+      color: #000;
+    }
+  
+    .sidebar li.active a {
+      color: #000;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      background-color: #333;
+      color: #fff;
+      border-color: #888;
+    }
+  
+    .contact-form button {
+      background-color: #ffd700;
+      color: #000;
+    }
+  
+    .social-grid li a {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #e3ecef;
+      border-color: #888;
+    }
+
+    header {
+      background-color: #333;
+    }
+
+    .sidebar {
+      background-color: #333;
+    }
+  }
  
