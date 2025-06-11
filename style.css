@@ -629,6 +629,10 @@ word-wrap: break-word; /* Change to normal if you want wrapping */
       color: #ffd700;
       text-shadow: 0 0 6px #ffd700;
     }
+
+    .social-links{
+      margin-bottom: 50px;
+    }
   }
 
 
